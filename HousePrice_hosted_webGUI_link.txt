@@ -1,0 +1,6 @@
+Name: Ogunsuji Olamide
+Matric Number: 23AG032721
+Machine Learning Algorithm Used: Random Forest Regressor
+Model Persistence Method Used: Joblib
+Live URL: https://your-live-link.onrender.com
+GitHub Repository Link: https://github.com/yourusername/HousePrice_Project_Favour_YourMatricNo

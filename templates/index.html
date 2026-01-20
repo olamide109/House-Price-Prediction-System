@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>House Price Prediction System</h1>
+    <p class="subtitle">Machine Learning–Based Regression Model</p>
+
+    <form method="POST" action="/predict">
+
+        <label>Overall Quality (1–10)</label>
+        <input type="number" name="overallqual" required>
+
+        <label>Above Ground Living Area (sq ft)</label>
+        <input type="number" name="grlivarea" required>
+
+        <label>Total Basement Area (sq ft)</label>
+        <input type="number" name="totalbsmtsf" required>
+
+        <label>Garage Cars Capacity</label>
+        <input type="number" name="garagecars" required>
+
+        <label>Number of Full Bathrooms</label>
+        <input type="number" name="fullbath" required>
+
+        <label>Year Built</label>
+        <input type="number" name="yearbuilt" required>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <h3>Predicted House Price</h3>
+            <p>{{ prediction }}</p>
+        </div>
+    {% endif %}
+
+    <footer>
+        <p>For educational purposes only.</p>
+    </footer>
+</div>
+
+</body>
+</html>
